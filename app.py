@@ -115,7 +115,7 @@ st.markdown("""
 st.markdown("<div class='title-container'>📚 LangQ: Your AI-Powered Interview Prep Curator</div>", unsafe_allow_html=True)
 
 # Author names in italic, light yellow color
-st.markdown("<div class='author-container'>By Dileep Kanumuri, Saranya Gopireddy, Satwik Dikkala</div>", unsafe_allow_html=True)
+st.markdown("<div class='author-container'>By Teja Rekadi, Chakri Chigurupati, Shiva Chigrurupati</div>", unsafe_allow_html=True)
 
 # Header Description with complementary color and centered alignment, with spacing adjusted
 st.markdown(
