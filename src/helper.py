@@ -2,13 +2,14 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.documents import Document
 from langchain_text_splitters import TokenTextSplitter
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
 from langchain_community.vectorstores import FAISS
 from langchain.chains import RetrievalQA
 import os
 from dotenv import load_dotenv
 from src.prompt import *
+
 
 
 
@@ -64,7 +65,7 @@ def llm_pipeline(file_path):
 
     llm_ques_gen_pipeline = ChatOpenAI(
         temperature = 0.3,
-        model = "gpt-3.5-turbo"
+        model_name = "gpt-3.5-turbo"
     )
 
    
@@ -90,7 +91,7 @@ def llm_pipeline(file_path):
 
     vector_store = FAISS.from_documents(document_answer_gen, embeddings)
 
-    llm_answer_gen = ChatOpenAI(temperature=0.1, model="gpt-3.5-turbo")
+    llm_answer_gen = ChatOpenAI(temperature=0.1, model_name="gpt-3.5-turbo")
 
     ques_list = ques.split("\n")
     filtered_ques_list = [element for element in ques_list if element.endswith('?') or element.endswith('.')]
