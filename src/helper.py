@@ -1,5 +1,5 @@
 from langchain_community.document_loaders import PyPDFLoader
-from langchain.schema import Document
+from langchain_core.documents import Document
 from langchain.text_splitter import TokenTextSplitter
 from langchain_community.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
