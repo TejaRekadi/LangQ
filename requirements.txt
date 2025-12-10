@@ -1,8 +1,8 @@
-langchain
-langchain-community
-langchain-core
-langchain-openai
-langchain-text-splitters
+langchain==0.1.16
+langchain-core==0.1.52
+langchain-community==0.0.30
+langchain-openai==0.1.3
+langchain-text-splitters==0.0.1
 openai
 pypdf
 tiktoken
@@ -12,4 +12,3 @@ PyPDF2
 faiss-cpu
 python-dotenv
 streamlit
--e .
