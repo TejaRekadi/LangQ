@@ -4,7 +4,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 import streamlit as st
-from langchain_openai import OpenAI
+from langchain_community.llms import OpenAI
 from src.helper import llm_pipeline  # Importing llm_pipeline from src.helper
 
 # Load environment variables (like OpenAI API key)
